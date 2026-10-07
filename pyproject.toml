@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "repohealthchecker"
+version = "1.0.0"
+description = "CLI de solo lectura para auditar la salud de repositorios de GitHub"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {file = "LICENSE"}
+authors = [{name = "RepoHealthChecker Contributors"}]
+keywords = ["github", "repository", "audit", "cli", "health"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Environment :: Console",
+    "Topic :: Software Development :: Quality Assurance",
+]
+
+[project.scripts]
+repohealthchecker = "repohealthchecker.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["repohealthchecker*"]
